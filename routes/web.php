@@ -15,5 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/verify-payment', 'PaymentController@verifyPayment');
 Route::post('mpesa','PaymentController@checkout')->name('grace');
-Route::post('confirm','PaymentController@confirm')->name('confirm');
+Route::post('confirm','PaymentController@getCallback');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

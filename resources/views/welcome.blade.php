@@ -90,10 +90,9 @@
                     <a href="https://laravel-news.com">News</a>
                     <form action="{{route('grace')}}" method="post">
                         <input type="hidden" name="phone" value="+254726284491">
-                         @csrf
-                         <button>Mpesa</button>
+                        @csrf
+                        <button>Mpesa</button>
                     </form>
-
                 </div>
             </div>
         </div>
